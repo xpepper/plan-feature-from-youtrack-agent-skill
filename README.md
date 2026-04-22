@@ -1,4 +1,4 @@
-# plan-feature-from-youtrack
+# Plan-feature-from-YouTrack Agent Skill
 
 An agent skill that generates a **spec** and an **implementation plan** from a YouTrack issue, grounded in your actual codebase.
 
