@@ -1,6 +1,8 @@
 # plan-feature-from-youtrack
 
-A Claude Code agent skill that generates a **spec** and an **implementation plan** from a YouTrack issue, grounded in your actual codebase.
+An agent skill that generates a **spec** and an **implementation plan** from a YouTrack issue, grounded in your actual codebase.
+
+Works with any agentic harness that supports the [Agent Skills specification](https://agentskills.io/specification) — Claude Code, Codex, Cursor, Copilot, Gemini CLI, and others.
 
 ## What it does
 
@@ -14,24 +16,17 @@ When you reference a YouTrack issue ID (e.g. `INTOP-1486`, `ABC-123`) and ask fo
 
 ## Prerequisites
 
-- [Claude Code](https://docs.anthropic.com/en/docs/claude-code) installed
-- [yt CLI](https://github.com/nickvdyck/yt) installed and authenticated with your YouTrack instance
+- The [yt CLI](https://github.com/nickvdyck/yt) installed and authenticated with your YouTrack instance
 
 ## Install
 
-Copy (or symlink) the `plan-feature-from-youtrack` folder into your skills directory:
-
 ```bash
-# Option 1: Copy
-cp -r plan-feature-from-youtrack ~/.claude/skills/
-
-# Option 2: Symlink (keeps it linked to the repo)
-ln -s "$(pwd)/plan-feature-from-youtrack" ~/.claude/skills/plan-feature-from-youtrack
+npx skills add xpepper/plan-feature-from-youtrack-agent-skill
 ```
 
 ## Usage
 
-In Claude Code, just mention a YouTrack issue ID and ask for a spec or plan:
+In your agent, mention a YouTrack issue ID and ask for a spec or plan:
 
 ```
 > create a spec from INTOP-1486

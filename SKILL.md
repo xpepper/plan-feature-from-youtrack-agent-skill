@@ -1,6 +1,8 @@
 ---
 name: plan-feature-from-youtrack
-description: "Use this skill whenever a YouTrack issue ID appears in the user's message (pattern: LETTERS-digits, e.g. INTOP-1486, ABC-123, PROJ-789) AND the user wants to generate a spec, plan, or implementation breakdown for that issue. Covers requests like: 'create a spec from INTOP-1486', 'plan the implementation for ABC-123', 'i want to start working on DEV-4421 — can you analyze it and give me a plan?', 'spec out USERSTORY-101', 'we have this youtrack issue PROJ-789 — write me an implementation plan', 'before i start on SERV-203 i want a spec', 'INTOP-1486 — can you plan this for me?', 'turn INOPS-512 into a detailed dev plan'. Do NOT trigger for: status checks ('is INTOP-1486 done?'), adding comments to issues, reviewing PRs against a ticket, debugging specific code, explaining concepts, or writing tests — even if a card ID is mentioned."
+description: "Generate a spec and implementation plan from a YouTrack issue, grounded in your codebase. Use when a YouTrack issue ID (e.g. INTOP-1486, ABC-123) appears in a message AND the user wants a spec, plan, or implementation breakdown. Triggers on: 'create a spec from INTOP-1486', 'plan ABC-123', 'DEV-4421 — give me a plan'. Does NOT trigger for: status checks, adding comments, PR reviews, debugging, or writing tests."
+license: MIT
+compatibility: "Requires the yt CLI (https://github.com/nickvdyck/yt) installed and authenticated with a YouTrack instance."
 ---
 
 # Plan Feature from YouTrack
